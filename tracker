@@ -1,0 +1,32 @@
+#!/usr/bin/ruby
+
+require "docopt"
+require "./lib/main"
+
+doc = <<DOCOPT
+Replicated Tracking System
+
+Usage:
+  #{__FILE__} app list
+  #{__FILE__} <app_name> app show 
+  #{__FILE__} <app_name> release list 
+  #{__FILE__} <app_name> release <release_num> show 
+  #{__FILE__} <app_name> release new <yaml_file> <release_version>
+  #{__FILE__} <app_name> channel <channel_name> show 
+  #{__FILE__} <app_name> channel <channel_name> promote <release_num> 
+  #{__FILE__} <app_name> license list 
+  #{__FILE__} <app_name> license <customer_name> show 
+  #{__FILE__} -h | --help
+  #{__FILE__} --version
+
+Options:
+  -h --help     Show this screen.
+  --version     Show version.
+
+DOCOPT
+
+begin
+  main_entrypoint(Docopt::docopt(doc))
+rescue Docopt::Exit => e
+  puts e.message
+end
