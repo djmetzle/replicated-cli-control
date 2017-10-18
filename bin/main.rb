@@ -1,3 +1,5 @@
+#!/bin/ruby
+
 require "pp"
 
 require "./lib/app"
