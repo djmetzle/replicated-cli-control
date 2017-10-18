@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    replicatedvendor (0.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  replicatedvendor!
+
+BUNDLED WITH
+   1.15.4
