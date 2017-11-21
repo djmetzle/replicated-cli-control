@@ -8,18 +8,19 @@ Replicated Tracking System
 
 Usage:
   #{__FILE__} app list
-  #{__FILE__} <app_name> app show 
-  #{__FILE__} <app_name> release list 
-  #{__FILE__} <app_name> release <release_num> show 
-  #{__FILE__} <app_name> release new <yaml_file> <release_version>
-  #{__FILE__} <app_name> channel <channel_name> show 
-  #{__FILE__} <app_name> channel <channel_name> promote <release_num> 
-  #{__FILE__} <app_name> license list 
-  #{__FILE__} <app_name> license <customer_name> show 
+  #{__FILE__} <app_name> app show [--json]
+  #{__FILE__} <app_name> release list [--json]
+  #{__FILE__} <app_name> release <release_num> show [--json]
+  #{__FILE__} <app_name> release new <yaml_file> <release_version> [--json]
+  #{__FILE__} <app_name> channel <channel_name> show [--json]
+  #{__FILE__} <app_name> channel <channel_name> promote <release_num>
+  #{__FILE__} <app_name> license list [--json]
+  #{__FILE__} <app_name> license <customer_name> show [--json]
   #{__FILE__} -h | --help
   #{__FILE__} --version
 
 Options:
+  --json        Machine Readable Output
   -h --help     Show this screen.
   --version     Show version.
 
